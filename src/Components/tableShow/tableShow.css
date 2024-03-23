@@ -1,0 +1,113 @@
+.table {
+  overflow: auto;
+  font-size: 16px;
+  color: var(--line-color);
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}
+
+.table table {
+  border-spacing: 0;
+  width: 100%;
+}
+.table th {
+  background-color: var(--blue-color);
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  padding: 5px;
+}
+.table td {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 5px;
+  text-transform: lowercase;
+}
+.action-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+tbody tr td:nth-child(1) {
+  text-align: center;
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--secondary-color);
+}
+tbody tr:hover {
+  background-color: var(--primary-color);
+}
+.table-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table-img img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.table-group-img {
+  position: relative;
+
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.table-group-img img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.table-group-img img:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 30px;
+}
+.table-group-img img:nth-child(3) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 60px;
+}
+
+.table-group-img img:nth-child(4) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 90px;
+}
+.table-group-img img:nth-child(5) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 120px;
+}
+
+.filter-inputs {
+  margin-bottom: var(--main-margin);
+  display: flex;
+  gap: 20px;
+}
+
+.table-desc-title {
+  white-space: nowrap;
+}

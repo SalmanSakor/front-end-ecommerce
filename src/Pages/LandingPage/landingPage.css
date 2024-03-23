@@ -1,0 +1,29 @@
+.landing-search-input {
+  text-align: center;
+}
+.landing-latestSale {
+  background-color: var(--primary-color);
+  margin: 20px 0;
+  padding: var(--main-padding);
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}
+.parent-card-latest-sale {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.parent-card-latest-sale .card {
+  width: 25%;
+}
+.parent-landing-top-latest {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}

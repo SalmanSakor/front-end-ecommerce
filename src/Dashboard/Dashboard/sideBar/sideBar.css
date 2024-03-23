@@ -1,0 +1,93 @@
+.grand-sideBar {
+  display: flex;
+  font-size: var(--main-font);
+  text-transform: capitalize;
+  position: relative;
+}
+.layout-sideBar {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  z-index: 5;
+  font-size: 16px;
+  padding: calc(var(--main-padding) / 2);
+}
+.layout-sideBar .icon-sideBar {
+  font-size: var(--main-font);
+}
+
+.links-sideBar {
+  height: calc(100vh - 90px);
+  background-color: var(--secondary-color);
+  width: 20%;
+  position: sticky;
+  top: 90px;
+  left: 0;
+  z-index: 1;
+  padding: var(--main-padding);
+}
+.outlet-sideBar {
+  min-height: calc(100vh - 90px);
+  width: 80%;
+  padding: var(--main-padding);
+  background-color: var(--primary-color);
+}
+.nav-side-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nav-side-open {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  background-color: var(--blue-color);
+  padding: calc(var(--main-padding) / 2);
+  color: white;
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.nav-side-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue-color);
+  padding: calc(var(--main-padding) / 2);
+  color: white;
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.nav-side-open:hover,
+.nav-side-close:hover {
+  background-color: var(--red-color);
+}
+.nav-side-parent .active {
+  background-color: var(--red-color);
+}
+
+.nav-side-open:hover .icon-sideBar {
+  color: white;
+}
+.nav-side-close:hover .icon-sideBar {
+  color: white;
+}
+.nav-side-parent .active .icon-sideBar {
+  color: white;
+}

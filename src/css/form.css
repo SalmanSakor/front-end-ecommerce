@@ -1,0 +1,69 @@
+.parent-form {
+  font-size: var(--main-font);
+  color: white;
+  text-transform: capitalize;
+}
+
+.parent-form form {
+  width: 450px;
+  margin: 0 auto;
+  background-color: var(--line-color);
+  padding: var(--main-padding);
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}
+
+.err-auth {
+  text-align: center;
+  background-color: var(--red-color);
+  width: 100%;
+  margin-top: var(--main-margin);
+  text-transform: lowercase;
+
+  color: white;
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}
+
+.category-open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px dashed white;
+  padding: var(--main-padding);
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}
+.category-close {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed white;
+  padding: var(--main-padding);
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+  opacity: 0.3;
+}
+
+.category-close .icon-upload {
+  cursor: default;
+}
+.inputs-flex {
+  display: flex;
+  gap: 20px;
+}

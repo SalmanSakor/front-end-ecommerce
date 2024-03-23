@@ -1,0 +1,13 @@
+.footer {
+  font-size: var(--main-font);
+  background-color: var(--primary-color);
+  margin-top: var(--main-margin);
+  text-transform: capitalize;
+  text-align: center;
+  padding: 0 5px;
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}

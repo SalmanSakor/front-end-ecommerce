@@ -1,0 +1,24 @@
+.page-404 {
+  font-size: var(--main-font);
+  color: var(--line-color);
+  width: 100%;
+  height: 100vh;
+  text-transform: capitalize;
+}
+.child-404 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-404-dashboard {
+  font-size: var(--main-font);
+  text-transform: capitalize;
+  color: var(--line-color);
+}
+.child-404-dashboard {
+  width: fit-content;
+  margin: auto;
+}

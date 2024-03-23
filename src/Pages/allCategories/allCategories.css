@@ -1,0 +1,31 @@
+.all-categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--secondary-color);
+}
+.one-category {
+  width: 200px;
+  padding: var(--secondary-padding);
+  background-color: var(--primary-color);
+
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}
+.one-category p {
+  text-align: center;
+}
+.one-category img {
+  width: 100%;
+
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}

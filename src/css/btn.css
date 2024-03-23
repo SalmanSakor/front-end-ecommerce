@@ -1,0 +1,88 @@
+/* btn start */
+.btn-submit {
+  font-size: var(--main-font);
+  text-transform: capitalize;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  color: var(--line-color);
+  cursor: pointer;
+  letter-spacing: 1px;
+  background-color: white;
+  margin-top: var(--main-margin);
+  margin-bottom: var(--main-margin);
+  border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.btn-submit:hover {
+  background-color: var(--red-color);
+  color: white;
+}
+.btn-submit:disabled {
+  background-color: var(--primary-color);
+}
+.btn-google {
+  width: fit-content;
+  margin: 0 auto;
+}
+.btn-submit:hover .icon-google {
+  color: white;
+}
+.flex-btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.header-btn {
+  font-size: var(--main-font);
+  background-color: var(--blue-color);
+  color: white;
+  padding: 0 7px;
+  cursor: pointer;
+  border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.header-btn:hover {
+  background-color: var(--red-color);
+}
+.btn-404 {
+  text-transform: lowercase;
+  border-bottom: 3px solid var(--blue-color);
+  cursor: pointer;
+  text-align: center;
+}
+/* btn end */
+
+.top-header {
+  margin-bottom: var(--main-margin);
+  color: white;
+  background-color: var(--red-color);
+  text-align: center;
+  text-transform: capitalize;
+  padding: 3px 5px;
+  letter-spacing: 1px;
+  font-size: var(--main-font);
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}

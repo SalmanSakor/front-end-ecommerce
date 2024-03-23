@@ -1,0 +1,72 @@
+.grand-header {
+  position: relative;
+}
+.layout-header {
+  font-size: 16px;
+  text-transform: lowercase;
+  color: white;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(46, 134, 222, 95%);
+  top: 40px;
+  left: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.layout-header:hover {
+  background-color: var(--blue-color);
+}
+
+.home-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--primary-color);
+  padding: var(--main-padding);
+  font-size: var(--main-font);
+}
+
+.header-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.header-parent .active {
+  background-color: var(--red-color);
+}
+
+.header-flex-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-flex-space1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.header-flex-space2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.header-flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+}
+p.header-btn {
+  background-color: var(--line-color);
+}
+.card .btn-submit {
+  margin-bottom: 0;
+}

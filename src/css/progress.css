@@ -1,0 +1,75 @@
+/*     progress start      */
+.custom-progress {
+  height: 9px;
+  background-color: var(--primary-color);
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+  margin-top: calc(2 * var(--main-margin));
+}
+.inner-progress {
+  display: block;
+  height: 100%;
+  position: relative;
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.inner-progress::after {
+  font-size: 15px;
+  color: black;
+  padding: 0 2px;
+  content: attr(percent);
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--primary-color);
+  top: -33px;
+  right: 0;
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}
+/*     progress end      */
+
+.parent-box-images {
+  margin-top: var(--main-margin);
+  margin-bottom: var(--main-margin);
+  font-size: var(--main-font);
+  color: var(--main-font);
+  background-color: white;
+  padding: calc(var(--main-padding) / 2);
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}
+.parent-box-images img {
+  width: 100%;
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
+}
+.items-box-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-inputs {
+  display: flex;
+  gap: 10px;
+}

@@ -1,0 +1,53 @@
+.icon-topBar {
+  font-size: 25px;
+  color: var(--red-color);
+  cursor: pointer;
+}
+.icon-header {
+  font-size: 25px;
+  color: var(--blue-color);
+  cursor: pointer;
+}
+.icon-table {
+  font-size: var(--main-font);
+  cursor: pointer;
+}
+.icon-upload {
+  font-size: 30px;
+  cursor: pointer;
+}
+.icon-star {
+  font-size: var(--main-font);
+  cursor: pointer;
+}
+.icon-product {
+  cursor: pointer;
+  color: var(--red-color);
+  font-size: var(--main-font);
+}
+
+.icon-sideBar {
+  cursor: pointer;
+  font-size: 25px;
+  color: var(--primary-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.icon-product {
+  cursor: pointer;
+  color: var(--red-color);
+  font-size: var(--main-font);
+}
+.icon-google {
+  font-size: var(--main-font);
+  cursor: pointer;
+  color: var(--blue-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}

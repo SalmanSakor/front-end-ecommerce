@@ -1,0 +1,484 @@
+/* container start */
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+/* container end */
+
+/* header start */
+@media (max-width: 348px) {
+  .header {
+    font-size: 13px;
+    height: 40px;
+    padding: 0 5px;
+  }
+  /* .header-child {
+    gap: 5px;
+  }
+ 
+  .btn-google {
+    margin-bottom: 10px;
+  } */
+  .home .container {
+    padding: 0;
+  }
+}
+@media (min-width: 348px) {/* 767 */
+  .header {
+    font-size: 16px;
+    height: 60px;
+    padding: 0 5px;
+  }
+  .header-child {
+    gap: 5px;
+  }
+  .home .container {
+    padding: 0;
+  }
+  .btn-google {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 767px) {
+  .header {
+    font-size: 20px;
+    height: 80px;
+    padding: 0 7px;
+  }
+  .header-child {
+    gap: 10px;
+  }
+  .home .container {
+    padding: 0 7px;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    font-size: 21px;
+    height: 70px;
+    padding: 0 10px;
+  }
+  .header-child {
+    gap: 15px;
+  }
+  .home .container {
+    padding: 0 10px;
+    
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    font-size: 23px;
+    height: 80px;
+    padding: 0 10px;
+  }
+  .header-child {
+    gap: 15px;
+  }
+  .home .container {
+    padding: 0 10px;
+  }
+}
+/* header start */
+
+/* auth start */
+
+@media (max-width: 348px) {
+  .parent-form form {
+    margin: 30px auto;
+    width: 200px;
+
+    padding: 5px;
+    font-size: 13px;
+  }
+  .parent-form form input {
+    font-size: 13px;
+    padding: 5px 3px;
+  }
+  .parent-form .btn-submit {
+    padding: 7px;
+    font-size: 10px;
+  }
+  .parent-form .btn-google {
+    padding: 7px;
+    font-size: 10px;
+  }
+  .err-auth {
+    font-size: 13px;
+  }
+}
+@media (min-width: 348px) {
+  .parent-form form {
+    margin: 30px auto;
+    width: 250px;
+    padding: 5px;
+    font-size: 13px;
+  }
+  .parent-form form input {
+    font-size: 13px;
+    padding: 5px 3px;
+  }
+  .parent-form .btn-submit {
+    padding: 7px;
+    font-size: 10px;
+  }
+  .parent-form .btn-google {
+    padding: 7px;
+    font-size: 10px;
+  }
+  .err-auth {
+    font-size: 13px;
+  }
+}
+@media (min-width: 768px) {
+  .parent-form form {
+    margin: 50px auto;
+    width: 350px;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .parent-form form input {
+    font-size: 20px;
+    padding: 10px 3px;
+  }
+  .parent-form .btn-submit {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .parent-form .btn-google {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .err-auth {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .parent-form form {
+    margin: 50px auto;
+    width: 400px;
+    padding: 15px;
+    font-size: 20px;
+  }
+  .parent-form form input {
+    font-size: 20px;
+    padding: 10px 3px;
+  }
+  .parent-form .btn-submit {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .parent-form .btn-google {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .err-auth {
+    font-size: 20px;
+  }
+}
+/* auth end */
+
+/* 403 && 404 start */
+
+@media (max-width: 396px) {
+  .page {
+    font-size: 20px;
+  }
+}
+@media (min-width: 396px) {
+  .page {
+    font-size: 40px;
+  }
+}
+/* 403 && 404 end */
+
+/* sideBar start */
+@media (min-width: 100px) and (max-width: 735px) {
+  .parent-form-dashboard form {
+    width: 95%;
+  }
+  .outlet-sideBar {
+    padding: 10px 0px;
+  }
+}
+
+@media (max-width: 735px) {
+  .navLinks-sideBar-open {
+    font-size: 14px;
+    gap: 3px;
+    padding: 4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+  .parent-form-dashboard form {
+    padding: 10px;
+    font-size: 15px;
+    width: 90%;
+  }
+  .parent-form-dashboard input {
+    font-size: 15px;
+    padding: 5px 3px;
+  }
+  .parent-form-dashboard select {
+    padding: 5px 0px;
+    font-size: 15px;
+  }
+  input[type="file"]::file-selector-button {
+    padding: 5px 0px;
+    font-size: 15px;
+  }
+  .parent-form-dashboard .btn-submit {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .outlet-sideBar {
+    padding: 10px 10px;
+    font-size: 14px;
+    min-height: calc(100vh - 70px);
+  }
+  /* /////////////////////////////////////////////// */
+  .parent-dashboard .container {
+    padding: 0;
+  }
+
+  .navLinks-sideBar-open {
+    font-size: 17px;
+    gap: 6px;
+    padding: 7px;
+  }
+
+  .links-sideBar {
+    padding: 0px 5px;
+    height: calc(100vh - 70px);
+    top: 70px;
+  }
+  /* /////////////////////////////////////////////// */
+}
+@media (min-width: 735px/* 768px */) {
+  .parent-dashboard .container {
+    padding: 0;
+  }
+  .navLinks-sideBar-open {
+    font-size: 14px;
+    gap: 3px;
+    padding: 4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+  .parent-form-dashboard form {
+    padding: 10px;
+    font-size: 15px;
+    width: 90%;
+  }
+  .parent-form-dashboard input {
+    font-size: 15px;
+    padding: 5px 3px;
+  }
+  .parent-form-dashboard select {
+    padding: 5px 0px;
+    font-size: 15px;
+  }
+  input[type="file"]::file-selector-button {
+    padding: 5px 0px;
+    font-size: 15px;
+  }
+  .parent-form-dashboard .btn-submit {
+    font-size: 15px;
+    padding: 5px;
+  }
+  .links-sideBar {
+    padding: 0px 5px;
+    height: calc(100vh - 70px);
+    top: 70px;
+  }
+  .outlet-sideBar {
+    padding: 10px 10px;
+    font-size: 14px;
+    min-height: calc(100vh - 70px);
+  }
+}
+@media (min-width: 992px) {
+  .navLinks-sideBar-open {
+    font-size: 17px;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+  .parent-form-dashboard form {
+    width: 70%;
+    padding: 20px;
+    font-size: 20px;
+  }
+  .parent-form-dashboard input {
+    font-size: 20px;
+    padding: 10px 3px;
+  }
+  .parent-form-dashboard select {
+    padding: 10px 0px;
+    font-size: 20px;
+  }
+  input[type="file"]::file-selector-button {
+    padding: 10px 0px;
+    font-size: 20px;
+  }
+  .parent-form-dashboard .btn-submit {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .links-sideBar {
+    padding: 10px 7px;
+    height: calc(100vh - 90px);
+    top: 90px;
+  }
+  .outlet-sideBar {
+    padding: 10px 15px;
+    font-size: 17px;
+    min-height: calc(100vh - 90px);
+  }
+}
+@media (min-width: 1200px) {
+  .navLinks-sideBar-open {
+    font-size: 23px;
+    gap: 7px;
+    padding: 7px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  .parent-form-dashboard form {
+    width: 60%;
+    padding: 20px;
+    font-size: 20px;
+  }
+  .parent-form-dashboard input {
+    font-size: 23px;
+    padding: 10px 3px;
+  }
+  .parent-form-dashboard select {
+    padding: 10px 0px;
+    font-size: 23px;
+  }
+  input[type="file"]::file-selector-button {
+    padding: 10px 0px;
+    font-size: 20px;
+  }
+  .parent-form-dashboard .btn-submit {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .links-sideBar {
+    padding: 10px 10px;
+  }
+  .outlet-sideBar {
+    padding: 10px 20px;
+    font-size: 23px;
+  }
+}
+/* sideBar end */
+
+/* topBar start */
+
+@media (max-width: 768px) {
+  .name-topBar {
+    font-size: 17px;
+  }
+  .link-topBar {
+    font-size: 17px;
+  }
+  .icon-topBar {
+    font-size: 17px;
+  }
+  .grand-topBar {
+    height: 70px;
+  }
+  /* ////////// */
+  .link-topBar {
+    display: none;
+  }
+  .d-flex2-topBar {
+    gap: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .link-topBar {
+    display: block;
+  }
+  .name-topBar {
+    font-size: 18px;
+  }
+  .link-topBar {
+    font-size: 18px;
+  }
+  .icon-topBar {
+    font-size: 18px;
+  }
+  .grand-topBar {
+    height: 70px;
+  }
+  .d-flex1-topBar {
+    gap: 70px;
+  }
+  .d-flex2-topBar {
+    gap: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .grand-topBar {
+    height: 70px;
+  }
+  .name-topBar {
+    font-size: 20px;
+  }
+  .link-topBar {
+    font-size: 20px;
+  }
+  .icon-topBar {
+    font-size: 20px;
+  }
+  .grand-topBar {
+    height: 90px;
+  }
+}
+@media (min-width: 1200px) {
+  .name-topBar {
+    font-size: 25px;
+  }
+  .link-topBar {
+    font-size: 25px;
+  }
+  .icon-topBar {
+    font-size: 25px;
+  }
+}
+/* topBar end */

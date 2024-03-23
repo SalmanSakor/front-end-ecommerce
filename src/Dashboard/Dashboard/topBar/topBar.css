@@ -1,0 +1,35 @@
+.grand-topBar {
+  height: 90px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  font-size: var(--main-font);
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  color: var(--line-color);
+  padding: var(--main-padding);
+}
+.flex1-topBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+.flex2-topBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.topBar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-topBar {
+  border-bottom: 5px solid var(--blue-color);
+}
