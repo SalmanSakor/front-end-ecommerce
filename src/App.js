@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/home";
 import LandingPage from "./Pages/LandingPage/landingPage";
+import Checkout from "./Pages/Checkout/checkout";
 import Register from "./Pages/Auth/register";
 import Login from "./Pages/Auth/login";
 import GoogleCallback from "./Pages/Auth/googleCallback";
@@ -30,6 +31,7 @@ const App = () => {
       <Route path="/" element={<Home />}>
         <Route index element={<LandingPage />} />
         <Route path="allCategories" element={<AllCategories />} />
+        <Route path="checkout" element={<Checkout />} />
         <Route element={<RequireBack />}>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

@@ -3,6 +3,7 @@ import { Axios } from "../../axios/axios";
 import { latest_sale_products } from "../../api/api";
 import Product from "../Product/product";
 import SkeletonShow from "../Skeleton/skeletonShow";
+
 const LatestSale = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,7 +16,7 @@ const LatestSale = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  // map products
+  // mapping products
   const result = products.map((item, index) => (
     <Product
       title={item.title}
@@ -26,6 +27,7 @@ const LatestSale = () => {
       img={item.images[0].image}
       key={index}
       sale
+      data={item}
     />
   ));
 

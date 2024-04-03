@@ -12,7 +12,6 @@ const TopRated = () => {
   useEffect(() => {
     Axios.get(`${top_rated}`)
       .then((data) => setProducts(data.data))
-
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, []);
@@ -27,6 +26,7 @@ const TopRated = () => {
       discount={item.discount}
       rating={item.rating}
       key={index}
+      data={item}
     />
   ));
 

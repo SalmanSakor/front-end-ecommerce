@@ -8,7 +8,6 @@
   -ms-border-radius: var(--main-radius);
   -o-border-radius: var(--main-radius);
 }
-
 .table table {
   border-spacing: 0;
   width: 100%;
@@ -59,7 +58,6 @@ tbody tr:hover {
 }
 .table-group-img {
   position: relative;
-
   width: 180px;
   display: flex;
   align-items: center;
@@ -75,7 +73,6 @@ tbody tr:hover {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-
 .table-group-img img:nth-child(2) {
   position: absolute;
   left: 0;
@@ -88,7 +85,6 @@ tbody tr:hover {
   top: 0;
   margin-left: 60px;
 }
-
 .table-group-img img:nth-child(4) {
   position: absolute;
   left: 0;
@@ -101,13 +97,11 @@ tbody tr:hover {
   top: 0;
   margin-left: 120px;
 }
-
 .filter-inputs {
   margin-bottom: var(--main-margin);
   display: flex;
   gap: 20px;
 }
-
 .table-desc-title {
   white-space: nowrap;
 }

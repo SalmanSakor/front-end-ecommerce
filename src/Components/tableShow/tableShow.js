@@ -13,7 +13,6 @@ const TableShow = (props) => {
   const [date, setDate] = useState("");
   const [searching, setSearching] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
-
   // filter data
   const filteredBySearch =
     date.length !== 0
@@ -107,7 +106,7 @@ const TableShow = (props) => {
                 className="icon-table"
                 icon={faTrash}
                 onClick={() => props.handleDelete(item1.id)}
-                color=" #f53b57"
+                color="#f53b57"
               />
             </div>
           </div>

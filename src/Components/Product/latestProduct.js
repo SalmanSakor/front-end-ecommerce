@@ -17,18 +17,21 @@ const LatestProducts = () => {
   }, []);
 
   // map latest products
-  const result = products.map((item, index) => (
-    <Product
-      title={item.title}
-      desc={item.description}
-      price={item.price}
-      discount={item.discount}
-      rating={item.rating}
-      img={item.images[0].image}
-      key={index}
-      sale
-    />
-  ));
+  const result = products
+    .filter((_, index) => index <= 2)
+    .map((item, index) => (
+      <Product
+        title={item.title}
+        desc={item.description}
+        price={item.price}
+        discount={item.discount}
+        rating={item.rating}
+        img={item.images[0].image}
+        key={index}
+        sale
+        data={item}
+      />
+    ));
 
   return (
     <div className="products">

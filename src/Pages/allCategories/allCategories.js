@@ -9,7 +9,7 @@ const AllCategories = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // all categories
+  // get all categories
   useEffect(() => {
     Axios.get(`${CAT}`)
       .then((res) => setCategories(res.data))
@@ -17,6 +17,7 @@ const AllCategories = () => {
       .finally(() => setLoading(false));
   }, []);
 
+  // mapping categories
   const result = categories.map((item, index) => (
     <div key={index} className="one-category">
       <p title={item.title}>name : {StringSlice(item.title, 10)}</p>

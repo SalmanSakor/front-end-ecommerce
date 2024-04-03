@@ -15,10 +15,22 @@ import StringSlice from "../../helpers/stringSlice";
 import SkeletonShow from "../Skeleton/skeletonShow";
 import { Width } from "./../../Context/width";
 import { Layout } from "../../Context/layout";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsCartOpen } from "../../store/cart/cart.action";
+import {
+  selectIsCartOpen,
+  selectCartCount,
+  selectCartItems,
+} from "../../store/cart/cart.selector";
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const isCartOpen = useSelector(selectIsCartOpen);
+  const counter = useSelector(selectCartCount);
+  const cartItems = useSelector(selectCartItems);
+
   const cookie = Cookie();
   const token = cookie.get("token");
 
@@ -32,8 +44,12 @@ const Header = () => {
   const OpenLayout = layoutContext.layoutOpen;
 
   //handle click
-  const handleClickIcon = async () => {
+  const handleClickIcon = () => {
     setLayoutOpen((prev) => !prev);
+  };
+  // handle click cart
+  const handleIsCartOPen = () => {
+    dispatch(setIsCartOpen(!isCartOpen));
   };
 
   //handle logout
@@ -47,37 +63,46 @@ const Header = () => {
     }
   };
 
-  // all categories
+  // get all categories
   useEffect(() => {
     Axios.get(`${CAT}`)
-      .then((res) => setCategories(res.data.slice(-5)))
+      .then((res) => setCategories(res.data.slice(0, 5)))
+      .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, []);
 
+  // mapping categories
   const result1 = categories.map((item, index) => (
-    <div key={index}>
-      <p className="header-btn">{StringSlice(item.title, 5)}</p>
-    </div>
+    <p className="header-btn" key={index}>
+      {StringSlice(item.title, 5)}
+    </p>
   ));
   const result2 = categories.map((item, index) => (
-    <div key={index}>
-      <p style={{ cursor: "pointer" }}>{StringSlice(item.title, 10)}</p>
-      <hr style={{ marginBottom: "5px" }} />
+    <p key={index} style={{ cursor: "pointer" }}>
+      {StringSlice(item.title, 20)}
+    </p>
+  ));
+
+  // mapping cart items
+  const cartItem = cartItems.map((item, index) => (
+    <div key={index} className="flex-cart-items">
+      <p>{StringSlice(item.title, 5)}</p>
+      <p>{item.discount}$</p>
+      <p className="quantity">{item.quantity}</p>
     </div>
   ));
 
+  // render data
   return (
     <div className="grand-header">
-      <>
-        {widthWindow <= 768 && !OpenLayout && (
-          <div className="layout-header">
-            <div>{result2}</div>
-            <NavLink to="/allCategories">
-              all categories <hr style={{ marginBottom: "5px" }} />
-            </NavLink>
-          </div>
-        )}
-      </>
+      {widthWindow <= 768 && !OpenLayout && (
+        <div className="layout-header">
+          {result2}
+          <NavLink to="/allCategories" className="header-btn">
+            all categories
+          </NavLink>
+        </div>
+      )}
 
       <div className="header-parent">
         <div className="header-flex-space">
@@ -118,10 +143,36 @@ const Header = () => {
             )}
             {widthWindow <= 768 && (
               <>
-                <FontAwesomeIcon
-                  icon={faBasketShopping}
-                  className="icon-header"
-                />
+                <div className="parent-basket">
+                  <div className="parent-icon-basket">
+                    <div>{counter}</div>
+                    <FontAwesomeIcon
+                      icon={faBasketShopping}
+                      className="icon-header"
+                      onClick={handleIsCartOPen}
+                    />
+                  </div>
+                  <div className="parent-cart-items">
+                    {isCartOpen && (
+                      <div className="layout-header">
+                        <div className="child-cart-items">{cartItem}</div>
+                        {counter === 0 && (
+                          <div
+                            className="header-btn"
+                            style={{ cursor: "default" }}
+                          >
+                            no items
+                          </div>
+                        )}
+                        {counter > 0 && (
+                          <Link to="/checkout" className="header-btn">
+                            check out
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
                 <Link to="/">
                   <FontAwesomeIcon icon={faHome} className="icon-header" />
                 </Link>
@@ -156,8 +207,32 @@ const Header = () => {
               </div>
             )}
           </div>
-          <div>
-            <FontAwesomeIcon icon={faBasketShopping} className="icon-header" />
+          <div className="parent-basket">
+            <div className="parent-icon-basket">
+              <div>{counter}</div>
+              <FontAwesomeIcon
+                icon={faBasketShopping}
+                className="icon-header"
+                onClick={handleIsCartOPen}
+              />
+            </div>
+            <div className="parent-cart-items">
+              {isCartOpen && (
+                <div className="layout-header">
+                  <div className="child-cart-items">{cartItem}</div>
+                  {counter === 0 && (
+                    <div className="header-btn" style={{ cursor: "default" }}>
+                      no items
+                    </div>
+                  )}
+                  {counter > 0 && (
+                    <Link to="checkout" className="header-btn">
+                      check out
+                    </Link>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

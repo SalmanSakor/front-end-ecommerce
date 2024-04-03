@@ -27,21 +27,30 @@ import "./Components/Product/productCard.css";
 import "./Pages/LandingPage/landingPage.css";
 import "./Components/Footer/Footer.css";
 import "./Pages/Home/home.css";
+import "./Pages/Checkout/checkout.css";
 
 // css media query
 import "./css/media.css";
+
 // skeleton
 import "react-loading-skeleton/dist/skeleton.css";
 
+// redux
+import { Provider } from "react-redux";
+import { store } from "./store/store";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <WidthProvider>
-    <OpenProvider>
-      <LayoutProvider>
-        <Router>
-          <App />
-        </Router>
-      </LayoutProvider>
-    </OpenProvider>
-  </WidthProvider>
+  <Provider store={store}>
+    <WidthProvider>
+      <OpenProvider>
+        <LayoutProvider>
+          <Router>
+            <App />
+          </Router>
+        </LayoutProvider>
+      </OpenProvider>
+    </WidthProvider>
+  </Provider>
 );

@@ -1,0 +1,24 @@
+.parent-checkout .table tbody tr td:nth-child(3),
+tbody tr td:nth-child(4),
+tbody tr td:nth-child(6) {
+  text-align: center;
+}
+.parent-checkout .table tbody tr td:nth-child(1),
+tbody tr td:nth-child(2) {
+  text-align: start;
+}
+.checkout-icons-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn-checkout .btn-submit {
+  margin: var(--main-margin) auto;
+  width: fit-content;
+  cursor: default;
+  text-transform: lowercase;
+}
+.parent-checkout .table tr th {
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}

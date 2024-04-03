@@ -5,17 +5,28 @@
   font-size: 16px;
   text-transform: lowercase;
   color: white;
-  padding: 5px 10px;
+  padding: calc(var(--main-padding) / 2);
   position: absolute;
   z-index: 2;
-  background-color: rgb(46, 134, 222, 95%);
+  background-color: rgb(46, 134, 222, 75%);
   top: 40px;
   left: 0;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  border: 1px solid white;
+  border-radius: var(--main-radius);
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
   -moz-transition: var(--main-transition);
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
 }
 .layout-header:hover {
   background-color: var(--blue-color);
@@ -69,4 +80,69 @@ p.header-btn {
 }
 .card .btn-submit {
   margin-bottom: 0;
+}
+.parent-basket {
+  position: relative;
+}
+.parent-basket .layout-header {
+  right: 0;
+  left: -150px;
+  gap: 15px;
+}
+.parent-icon-basket {
+  position: relative;
+}
+.parent-icon-basket div {
+  position: absolute;
+  font-size: 14px;
+  left: 3px;
+  top: 30px;
+  color: white;
+  background-color: var(--red-color);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.parent-cart-items .layout-header {
+  align-items: center;
+  padding: var(--main-padding);
+}
+
+.child-cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.flex-cart-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px dashed var(--primary-color);
+}
+.layout-header .header-btn {
+  letter-spacing: 1px;
+}
+.quantity {
+  font-size: 14px;
+
+  color: white;
+  background-color: var(--red-color);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
