@@ -1,8 +1,11 @@
-import { faBars, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faRightFromBracket,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { Open } from "../../../Context/isOpen";
+import { Menu } from "../../../Context/menu";
 import { Axios } from "../../../axios/axios";
 import { USER, LOGOUT } from "../../../api/api";
 import Cookie from "cookie-universal";
@@ -12,9 +15,10 @@ const TopBar = () => {
   const cookie = Cookie();
   const [name, setName] = useState("");
 
-  // openContext
-  const openContext = useContext(Open);
-  const setIsOpen = openContext.setIsOpen;
+  // menuContext
+  const menuContext = useContext(Menu);
+  const setIsOpen = menuContext.setIsOpen;
+  const isOpen = menuContext.isOpen;
 
   // widthContext
   const widthContext = useContext(Width);
@@ -48,7 +52,7 @@ const TopBar = () => {
           <div className="link-topBar hidden">Dashboard</div>
         )}
         <FontAwesomeIcon
-          icon={faBars}
+          icon={widthWindow <= 768 && !isOpen ? faXmark : faBars}
           onClick={handleLink}
           className="icon-topBar"
         />

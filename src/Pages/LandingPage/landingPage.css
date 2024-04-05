@@ -1,7 +1,7 @@
 .landing-search-input {
   text-align: center;
 }
-.landing-latestSale {
+.landing-product {
   background-color: var(--primary-color);
   margin: 20px 0;
   padding: var(--main-padding);
@@ -11,19 +11,15 @@
   -ms-border-radius: var(--main-radius);
   -o-border-radius: var(--main-radius);
 }
-.parent-card-latest-sale {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.parent-card-latest-sale .card {
-  width: 25%;
-}
-.parent-landing-top-latest {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 20px;
+
+.img-landing {
+  width: 100%;
+  height: 400px;
+  opacity: 0.9;
+  border-radius: calc(var(--main-radius) * 2);
+  -webkit-border-radius: calc(var(--main-radius) * 2);
+  -moz-border-radius: calc(var(--main-radius) * 2);
+  -ms-border-radius: calc(var(--main-radius) * 2);
+  -o-border-radius: calc(var(--main-radius) * 2);
+  margin-top: var(--main-margin);
 }

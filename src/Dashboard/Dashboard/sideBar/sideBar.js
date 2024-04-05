@@ -5,13 +5,13 @@ import { Axios } from "../../../axios/axios";
 import { Data } from "./sideLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
-import { Open } from "../../../Context/isOpen";
+import { Menu } from "../../../Context/menu";
 
 const SideBar = () => {
   const [role, setRole] = useState("");
 
-  // context
-  const openContext = useContext(Open);
+  // menuContext
+  const openContext = useContext(Menu);
   const isOpen = openContext.isOpen;
 
   // Current User

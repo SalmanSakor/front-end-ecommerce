@@ -34,16 +34,16 @@ const LatestSale = () => {
   return (
     <div>
       <h4 className="top-header">latest sale products</h4>
-      <div className="parent-card-latest-sale">
+      <div className="parent-card-product">
         {loading ? (
           <SkeletonShow
             length={4}
             width="200px"
-            height="200px"
+            height="500px"
             color="#dfe6e9"
           />
         ) : (
-          result
+         result
         )}
       </div>
     </div>

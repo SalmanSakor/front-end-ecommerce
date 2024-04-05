@@ -15,7 +15,6 @@
 .table th {
   background-color: var(--blue-color);
   text-align: center;
-  text-transform: capitalize;
   color: white;
   padding: 5px;
 }

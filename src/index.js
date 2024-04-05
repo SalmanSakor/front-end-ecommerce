@@ -5,9 +5,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 
 // useContext
-import OpenProvider from "./Context/isOpen";
+import MenuProvider from "./Context/menu";
 import WidthProvider from "./Context/width";
-import LayoutProvider from "./Context/layout";
+
 // css files
 import "./App.css";
 import "./css/form.css";
@@ -46,13 +46,11 @@ root.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <WidthProvider>
-        <OpenProvider>
-          <LayoutProvider>
-            <Router>
-              <App />
-            </Router>
-          </LayoutProvider>
-        </OpenProvider>
+        <MenuProvider>
+          <Router>
+            <App />
+          </Router>
+        </MenuProvider>
       </WidthProvider>
     </PersistGate>
   </Provider>

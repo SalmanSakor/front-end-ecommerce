@@ -82,23 +82,4 @@ input[type="file"]::file-selector-button {
 .search-landing input::placeholder {
   color: var(--line-color);
 }
-.date-input {
-  border: none;
-  width: 20%;
-  color: var(--line-color);
-  font-size: 20px;
-  padding: 10px 5px;
-  caret-color: var(--blue-color);
-  color: var(--line-color);
-  border-radius: var(--main-radius);
-  -webkit-border-radius: var(--main-radius);
-  -moz-border-radius: var(--main-radius);
-  -ms-border-radius: var(--main-radius);
-  -o-border-radius: var(--main-radius);
-  transition: var(--main-transition);
-  -webkit-transition: var(--main-transition);
-  -moz-transition: var(--main-transition);
-  -ms-transition: var(--main-transition);
-  -o-transition: var(--main-transition);
-}
 /* input end */

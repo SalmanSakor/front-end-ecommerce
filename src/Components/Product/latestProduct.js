@@ -34,14 +34,14 @@ const LatestProducts = () => {
     ));
 
   return (
-    <div className="products">
+    <div>
       <h4 className="top-header">latest products</h4>
-      <div className="parent-card">
+      <div className="parent-card-product">
         {loading ? (
           <SkeletonShow
             length={4}
             width="200px"
-            height="300px"
+            height="500px"
             color="#dfe6e9"
           />
         ) : (

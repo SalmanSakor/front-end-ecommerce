@@ -1,11 +1,9 @@
-.home-header {
-  border-bottom: 2px solid var(--blue-color);
-}
-
 .home-outlet {
   background-color: var(--secondary-color);
   min-height: 100vh;
   padding: var(--main-padding);
   font-size: var(--main-font);
   color: var(--line-color);
+  border-right: 3px solid white;
+  border-left: 3px solid white;
 }

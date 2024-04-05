@@ -10,21 +10,9 @@ import StringSlice from "../../helpers/stringSlice";
 const TableShow = (props) => {
   const currentUser = props.currentUser || false;
   const [search, setSearch] = useState("");
-  const [date, setDate] = useState("");
   const [searching, setSearching] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
-  // filter data
-  const filteredBySearch =
-    date.length !== 0
-      ? filteredData.filter((item) => TransformDate(item.created_at) === date)
-      : filteredData;
-
-  const filteredByDate =
-    date.length !== 0
-      ? props.data.filter((item) => TransformDate(item.created_at) === date)
-      : props.data;
-
-  const showData = search.length > 0 ? filteredBySearch : filteredByDate;
+  const showData = search.length > 0 ? filteredData : props.data;
 
   useEffect(() => {
     const gitFilteredData = async () => {
@@ -117,24 +105,16 @@ const TableShow = (props) => {
 
   return (
     <>
-      <div className="filter-inputs">
-        <input
-          type="search"
-          value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-            setSearching(true);
-          }}
-          className="search-input"
-          placeholder="search .."
-        />
-        <input
-          type="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          className="date-input"
-        />
-      </div>
+      <input
+        type="search"
+        value={search}
+        onChange={(e) => {
+          setSearch(e.target.value);
+          setSearching(true);
+        }}
+        className="search-input"
+        placeholder="search .."
+      />
 
       <div className="table">
         <table>
