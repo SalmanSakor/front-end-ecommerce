@@ -55,8 +55,10 @@ const Header = () => {
 
   // mapping categories
   const navbar = categories.map((item, index) => (
-    <p key={index} className="header-btn">
-      {item.title}
+    <p key={index}>
+      <NavLink to={`/allCategories/${item.id}`} className="header-btn">
+        {item.title}
+      </NavLink>
     </p>
   ));
 
@@ -64,8 +66,8 @@ const Header = () => {
   const menu = windowSize <= 768 && (
     <div>
       {categories.map((item, index) => (
-        <p key={index} style={{ cursor: "pointer" }}>
-          {item.title}
+        <p key={index} onClick={handleClickIcon}>
+          <Link to={`/allCategories/${item.id}`}>{item.title}</Link>
         </p>
       ))}
       <p onClick={handleClickIcon}>

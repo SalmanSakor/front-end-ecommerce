@@ -28,6 +28,7 @@ import "./Pages/LandingPage/landingPage.css";
 import "./Components/Footer/Footer.css";
 import "./Pages/Home/home.css";
 import "./Pages/Checkout/checkout.css";
+import "./Components/ProductItems/productItems.css";
 
 // css media query
 import "./css/media.css";

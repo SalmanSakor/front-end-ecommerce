@@ -50,7 +50,7 @@ const LandingPage = () => {
     search.length > 0 &&
     filteredProducts.map((item, index) => (
       <div key={index} className="child-result-filter">
-        {item.description}
+        <Link to={`/allProducts/${item.id}`}>{item.description}</Link>
       </div>
     ));
 
@@ -78,7 +78,7 @@ const LandingPage = () => {
           />
           <div className="parent-result-filter">
             {resultFilter}
-            {filteredProducts.length === 0 && (
+            {filteredProducts.length === 0 && search.length > 0 && (
               <div child-result-filter>no result</div>
             )}
           </div>

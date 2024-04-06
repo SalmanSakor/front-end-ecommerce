@@ -105,16 +105,18 @@ const TableShow = (props) => {
 
   return (
     <>
-      <input
-        type="search"
-        value={search}
-        onChange={(e) => {
-          setSearch(e.target.value);
-          setSearching(true);
-        }}
-        className="search-input"
-        placeholder="search .."
-      />
+      <div className="filter-table">
+        <input
+          type="search"
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+            setSearching(true);
+          }}
+          className="search-input"
+          placeholder="search .."
+        />
+      </div>
 
       <div className="table">
         <table>

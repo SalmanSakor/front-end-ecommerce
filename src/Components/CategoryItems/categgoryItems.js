@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as solid } from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../../store/cart/cart.action";
 import { selectCartItems } from "../../store/cart/cart.selector";
-import { useDispatch, useSelector } from "react-redux";
 
-const Product = (props) => {
+const OneCategory = (props) => {
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
   const round = Math.round(props.rating);
@@ -38,7 +38,6 @@ const Product = (props) => {
 
       <div className="cart-product-items">
         <img src={props.img} alt="product" />
-        {props.sale && <div className="product-sale">sale</div>}
       </div>
 
       <div>
@@ -58,4 +57,5 @@ const Product = (props) => {
     </div>
   );
 };
-export default Product;
+
+export default OneCategory;

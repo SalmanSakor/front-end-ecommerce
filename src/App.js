@@ -24,6 +24,8 @@ import Products from "./Dashboard/Product/products";
 import AddProduct from "./Dashboard/Product/addProduct";
 import UpdateProduct from "./Dashboard/Product/updateProduct";
 import AllCategories from "./Pages/allCategories/allCategories";
+import OneCategory from "./Pages/oneCategory/oneCategory";
+import AllProducts from "./Pages/allProducts/allProducts";
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
       <Route path="/" element={<Home />}>
         <Route index element={<LandingPage />} />
         <Route path="allCategories" element={<AllCategories />} />
+        <Route path="allCategories/:id" element={<OneCategory />} />
+        <Route path="allProducts/:id" element={<AllProducts />} />
         <Route path="checkout" element={<Checkout />} />
         <Route element={<RequireBack />}>
           <Route path="/register" element={<Register />} />

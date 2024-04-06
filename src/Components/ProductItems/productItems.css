@@ -1,0 +1,14 @@
+.one-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.one-product img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

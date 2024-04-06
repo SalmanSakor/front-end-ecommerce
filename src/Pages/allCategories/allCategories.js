@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Axios } from "../../axios/axios";
 import { CAT } from "../../api/api";
 import SkeletonShow from "../../Components/Skeleton/skeletonShow";
@@ -33,7 +34,9 @@ const AllCategories = () => {
     <div key={index} className="one-category">
       <p className="btn-submit">{item.title}</p>
       <img src={item.image} alt="category" />
-      <div className="btn-submit">show all</div>
+      <div className="btn-submit">
+        <Link to={`${item.id}`}>show all</Link>
+      </div>
     </div>
   ));
 

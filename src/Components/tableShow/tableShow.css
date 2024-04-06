@@ -104,3 +104,6 @@ tbody tr:hover {
 .table-desc-title {
   white-space: nowrap;
 }
+.filter-table .search-input {
+  margin-bottom: 10px;
+}

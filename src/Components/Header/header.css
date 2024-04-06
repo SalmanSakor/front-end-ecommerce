@@ -17,6 +17,7 @@
 .header-flex-out .active {
   background-color: var(--red-color);
 }
+
 .header-flex-in {
   display: flex;
   align-items: center;
@@ -71,6 +72,9 @@
 }
 .menu p:hover {
   letter-spacing: 2px;
-  text-transform: capitalize;
+
   color: var(--secondary-color);
+}
+header.top-header {
+  background-color: var(--blue-color);
 }
