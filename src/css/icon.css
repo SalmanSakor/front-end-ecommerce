@@ -51,3 +51,7 @@
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
 }
+.icon-cart {
+  font-size: 30px;
+  color: var(--blue-color);
+}

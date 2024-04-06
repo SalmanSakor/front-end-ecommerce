@@ -3,7 +3,6 @@ import { useEffect, useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
-  faCartShopping,
   faRightFromBracket,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
@@ -11,25 +10,13 @@ import Cookie from "cookie-universal";
 import { LOGOUT } from "../../api/api";
 import { Axios } from "../../axios/axios";
 import { CAT } from "../../api/api";
-import StringSlice from "../../helpers/stringSlice";
 import SkeletonShow from "../Skeleton/skeletonShow";
 import { Width } from "./../../Context/width";
 import { Menu } from "../../Context/menu";
-import { useDispatch, useSelector } from "react-redux";
-import { setIsCartOpen } from "../../store/cart/cart.action";
-import {
-  selectIsCartOpen,
-  selectCartCount,
-  selectCartItems,
-} from "../../store/cart/cart.selector";
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
-  const dispatch = useDispatch();
-  const isCartOpen = useSelector(selectIsCartOpen);
-  const counter = useSelector(selectCartCount);
-  const cartItems = useSelector(selectCartItems);
   const cookie = Cookie();
   const token = cookie.get("token");
 
@@ -42,17 +29,12 @@ const Header = () => {
   const setOpenMenu = menuContext.setIsOpen;
   const isOpenMenu = menuContext.isOpen;
 
-  //handle click menu
+  // handle click menu
   const handleClickIcon = () => {
     setOpenMenu((prev) => !prev);
   };
 
-  // handle click cart
-  const handleIsCartOpen = () => {
-    dispatch(setIsCartOpen(!isCartOpen));
-  };
-
-  //handle logout
+  // handle logout
   const logoutHandler = async () => {
     try {
       await Axios.get(`${LOGOUT}`);
@@ -94,18 +76,9 @@ const Header = () => {
       </p>
     </div>
   );
-  // mapping cart items
-  const cartItem = cartItems.map((item, index) => (
-    <div key={index} className="flex-cart-items">
-      <p>{StringSlice(item.title, 4)}</p>
-      <p>{item.discount}$</p>
-      <p className="quantity">{item.quantity}</p>
-    </div>
-  ));
 
   return (
     <>
-      {/* 1 */}
       <div className="header-flex-out">
         <NavLink
           to="/"
@@ -122,14 +95,17 @@ const Header = () => {
               onClick={handleClickIcon}
             />
           )}
-          {!isOpenMenu && (
-            <div
-              className="menu"
-              style={{ display: windowSize > 768 && "none" }}
-            >
-              {menu}
-            </div>
-          )}
+
+          <>
+            {!isOpenMenu && (
+              <div
+                className="menu"
+                style={{ display: windowSize > 768 && "none" }}
+              >
+                {menu}
+              </div>
+            )}
+          </>
         </div>
 
         <div className="header-flex-in">
@@ -157,15 +133,21 @@ const Header = () => {
           )}
         </div>
       </div>
-      {/* 2 */}
+
       <div
         className="navbar-flex"
         style={{ display: windowSize <= 768 && "none" }}
       >
-        {navbar}
-        <NavLink to="/allCategories" className="header-btn">
-          all categories
-        </NavLink>
+        {loading ? (
+          <SkeletonShow length={6} width="70px" height="30px" color="#dfe6e9" />
+        ) : (
+          <>
+            {navbar}
+            <NavLink to="/allCategories" className="header-btn">
+              all categories
+            </NavLink>
+          </>
+        )}
       </div>
     </>
   );
