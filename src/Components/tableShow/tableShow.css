@@ -18,6 +18,11 @@
   color: white;
   padding: 5px;
 }
+.table tr th {
+  border: 1px solid white;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
 .table td {
   border-left: 1px solid white;
   border-right: 1px solid white;

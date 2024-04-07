@@ -1,14 +1,3 @@
-.home-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  background-color: var(--primary-color);
-  padding: var(--main-padding);
-  font-size: var(--main-font);
-  border-right: 3px solid white;
-  border-left: 3px solid white;
-}
 .navbar-flex p .header-btn {
   background-color: var(--line-color);
 }
