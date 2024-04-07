@@ -10,13 +10,12 @@
   width: 25%;
   background-color: var(--secondary-color);
   padding: var(--main-padding);
-  border-radius: var(--main-radius);
-  -webkit-border-radius: var(--main-radius);
-  -moz-border-radius: var(--main-radius);
-  -ms-border-radius: var(--main-radius);
-  -o-border-radius: var(--main-radius);
-  border: 1px solid white;
-  border-bottom: 1px solid var(--blue-color);
+  border-radius: calc(var(--main-radius) * 2);
+  -webkit-border-radius: calc(var(--main-radius) * 2);
+  -moz-border-radius: calc(var(--main-radius) * 2);
+  -ms-border-radius: calc(var(--main-radius) * 2);
+  -o-border-radius: calc(var(--main-radius) * 2);
+  border: 3px solid white;
 }
 
 .card-product img {
@@ -59,6 +58,7 @@
   cursor: default;
   margin-top: 0;
   color: var(--line-color);
+  padding: calc(var(--main-padding) / 10);
   background-color: var(--primary-color);
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);

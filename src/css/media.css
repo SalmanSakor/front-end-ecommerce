@@ -169,7 +169,7 @@
     font-size: 16px;
   }
   .search-input {
-    padding: 5px 5px;
+    padding: 7px 3px;
     font-size: 16px;
     width: 100%;
   }
@@ -236,6 +236,9 @@
   }
 
   /* landing */
+  .landing-product {
+    margin: 10px 0;
+  }
 
   /* icon */
 
@@ -248,8 +251,16 @@
   .icon-table {
     font-size: 16px;
   }
-  .icon-upload {
+  .icon-upload,
+  .icon-cart {
     font-size: 20px;
+  }
+  .counter-cart {
+    height: 19px;
+    width: 19px;
+    font-size: 12px;
+    top: -7px;
+    left: 4px;
   }
 
   /* 404 404 */
@@ -259,7 +270,35 @@
   .page-404-dashboard {
     font-size: var(--main-font);
   }
+
   /* header */
+  .icon-header {
+    font-size: 17px;
+  }
+  .pop-up {
+    width: 200px;
+    font-size: 16px;
+    padding: calc(var(--main-padding) / 2);
+    border: 1px solid white;
+  }
+  .cart-items-child {
+    width: 200px;
+    font-size: var(--main-font);
+    padding: var(--main-padding);
+  }
+  .hidden {
+    display: none;
+  }
+  .cart-items-child {
+    width: 170px;
+    gap: 5px;
+    font-size: 16px;
+    top: 40px;
+    padding: calc(var(--main-padding) / 2);
+  }
+  .child-result-filter {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -368,6 +407,9 @@
   }
 
   /* landing */
+  .landing-product {
+    margin: 20px 0;
+  }
 
   /* icon */
   .icon-topBar {
@@ -379,8 +421,15 @@
   .icon-table {
     font-size: var(--main-font);
   }
-  .icon-upload {
+  .icon-upload,
+  .icon-cart {
     font-size: 30px;
+  }
+  .counter-cart {
+    top: -17px;
+    left: 7px;
+    height: 27px;
+    width: 27px;
   }
 
   /* 404 404 */
@@ -391,4 +440,28 @@
     font-size: 25px;
   }
   /* header */
+  .icon-header {
+    font-size: 25px;
+  }
+
+  /* pop-up */
+  .pop-up {
+    width: 300px;
+    border: 3px solid white;
+    padding: var(--main-padding);
+    font-size: 20px;
+  }
+
+  .hidden {
+    display: block;
+  }
+  .cart-items-child {
+    width: 200px;
+    gap: 10px;
+    font-size: var(--main-font);
+    padding: var(--main-padding);
+  }
+  .child-result-filter {
+    font-size: 18px;
+  }
 }

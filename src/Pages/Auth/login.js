@@ -89,7 +89,9 @@ const Login = () => {
               href="http://127.0.0.1:8000/login-google"
               className="flex-btn-google"
             >
-              <div>login with google {""}</div>
+              <div style={{ textTransform: "lowercase" }}>
+                login with google {""}
+              </div>
               <FontAwesomeIcon icon={faGoogle} className="icon-google" />
             </a>
           </button>

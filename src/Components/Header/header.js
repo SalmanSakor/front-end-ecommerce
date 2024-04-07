@@ -74,7 +74,7 @@ const Header = () => {
 
   // menu
   const menu = windowSize <= 768 && (
-    <div>
+    <div className="grand-menu">
       {categories.map((item, index) => (
         <p key={index} onClick={handleClickIcon}>
           <Link to={`/allCategories/${item.id}`}>{item.title}</Link>

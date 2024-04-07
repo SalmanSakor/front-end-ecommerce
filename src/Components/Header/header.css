@@ -35,30 +35,39 @@
 .navbar-flex .active {
   background-color: var(--red-color);
 }
+.grand-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  text-transform: capitalize;
+}
 .parent-menu {
   position: relative;
 }
 .menu {
-  width: 190px;
-  font-size: 20px;
   position: absolute;
-  top: 35px;
   z-index: 1;
   left: 0;
   color: white;
   border: 1px solid white;
-  padding: var(--main-padding);
-  border-radius: var(--main-radius);
-  -webkit-border-radius: var(--main-radius);
-  -moz-border-radius: var(--main-radius);
-  -ms-border-radius: var(--main-radius);
-  -o-border-radius: var(--main-radius);
+  width: 150px;
+  font-size: 16px;
+  padding: calc(var(--main-padding) / 2);
+  top: 40px;
+  border-radius: calc(var(--main-radius) * 2);
+  -webkit-border-radius: calc(var(--main-radius) * 2);
+  -moz-border-radius: calc(var(--main-radius) * 2);
+  -ms-border-radius: calc(var(--main-radius) * 2);
+  -o-border-radius: calc(var(--main-radius) * 2);
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
   -moz-transition: var(--main-transition);
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
   background-color: rgb(46, 134, 222, 85%);
+  border-bottom: 5px white solid;
 }
 .menu:hover {
   background-color: var(--blue-color);
@@ -72,7 +81,6 @@
 }
 .menu p:hover {
   letter-spacing: 2px;
-
   color: var(--secondary-color);
 }
 header.top-header {
@@ -84,11 +92,13 @@ header.top-header {
   top: 50%;
   left: 50%;
   z-index: 4;
-  padding: var(--main-padding);
+
   color: white;
   background-color: var(--blue-color);
   width: 300px;
   border: 3px solid white;
+  padding: var(--main-padding);
+  font-size: 20px;
   border-radius: var(--main-radius);
   -webkit-border-radius: var(--main-radius);
   -moz-border-radius: var(--main-radius);

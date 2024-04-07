@@ -68,7 +68,7 @@ const LandingPage = () => {
   return (
     <div className="landing-parent">
       <div className="landing-input-icon">
-        <div></div>
+        <div className="hidden"></div>
         <div className="grand-result-filter">
           {loading ? (
             <SkeletonShow
@@ -89,7 +89,7 @@ const LandingPage = () => {
           <div className="parent-result-filter">
             {resultFilter}
             {filteredProducts.length === 0 && search.length > 0 && (
-              <div child-result-filter>no result</div>
+              <div classNam="child-result-filter">no result</div>
             )}
           </div>
         </div>

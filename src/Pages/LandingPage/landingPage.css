@@ -1,7 +1,8 @@
 .landing-input-icon {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .parent-cart {
@@ -19,6 +20,8 @@
 .counter-cart {
   top: -17px;
   left: 7px;
+  height: 27px;
+  width: 27px;
   position: absolute;
   font-size: 16px;
   display: flex;
@@ -26,8 +29,6 @@
   justify-content: center;
   color: white;
   background-color: var(--red-color);
-  height: 27px;
-  width: 27px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -37,17 +38,18 @@
 .cart-items-child {
   width: 200px;
   position: absolute;
-  font-size: 20px;
+  font-size: var(--main-font);
   right: 0;
   z-index: 1;
   color: white;
   border: 1px solid white;
+  border-bottom: 5px white solid;
   padding: var(--main-padding);
-  border-radius: var(--main-radius);
-  -webkit-border-radius: var(--main-radius);
-  -moz-border-radius: var(--main-radius);
-  -ms-border-radius: var(--main-radius);
-  -o-border-radius: var(--main-radius);
+  border-radius: calc(var(--main-radius) * 2);
+  -webkit-border-radius: calc(var(--main-radius) * 2);
+  -moz-border-radius: calc(var(--main-radius) * 2);
+  -ms-border-radius: calc(var(--main-radius) * 2);
+  -o-border-radius: calc(var(--main-radius) * 2);
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
   -moz-transition: var(--main-transition);
@@ -119,6 +121,11 @@
 .grand-result-filter {
   position: relative;
 }
+.grand-result-filter input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .child-result-filter {
   text-transform: lowercase;
   font-size: 18px;
@@ -131,7 +138,9 @@
   z-index: 2;
   background-color: var(--secondary-color);
   text-align: center;
-
   border-bottom-left-radius: var(--main-radius);
   border-bottom-right-radius: var(--main-radius);
+  border-bottom: 3px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
