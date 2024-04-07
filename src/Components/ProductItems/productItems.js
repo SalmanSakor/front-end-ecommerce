@@ -15,23 +15,20 @@ const OneProduct = (props) => {
     <div className="one-product">
       <div>
         <p>Name : {props.title}</p>
-        <hr />
+
         <p>Description : {props.desc}</p>
-        <hr />
-        <p>Rating : {props.rating}/5</p>
-        <hr />
-        <div>Price : {props.price}$</div>
-        <hr />
-        <div>Discount : {props.discount}$</div>
-        <hr />
-        <div>About : {props.about}</div>
-        <hr />
+
+        <p>Price : {props.price}$</p>
+
+        <p>Discount : {props.discount}$</p>
+
+        <p>About : {props.about}</p>
 
         <button onClick={handleClickCart} className="btn-submit">
           add to cart
         </button>
       </div>
-      <div>
+      <div className="product-items-order">
         <img src={props.img} alt="product" />
       </div>
     </div>

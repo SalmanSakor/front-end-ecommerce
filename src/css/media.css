@@ -338,6 +338,17 @@
   .one-category img {
     height: 300px;
   }
+  .one-product img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .one-product {
+    flex-direction: column;
+  }
+  .product-items-order {
+    order: -1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -536,5 +547,16 @@
   }
   .one-category img {
     height: 500px;
+  }
+  .one-product img {
+    width: 400px;
+    border-radius: calc(var(--main-radius) * 2);
+    -webkit-border-radius: calc(var(--main-radius) * 2);
+    -moz-border-radius: calc(var(--main-radius) * 2);
+    -ms-border-radius: calc(var(--main-radius) * 2);
+    -o-border-radius: calc(var(--main-radius) * 2);
+  }
+  .one-product {
+    flex-direction: row;
   }
 }

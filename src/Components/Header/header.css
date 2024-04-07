@@ -8,7 +8,13 @@
   font-size: var(--main-font);
   border-right: 3px solid white;
   border-left: 3px solid white;
-} /* 1 */
+}
+.navbar-flex p .header-btn {
+  background-color: var(--line-color);
+}
+.navbar-flex p .active {
+  background-color: var(--red-color);
+}
 .header-flex-out {
   display: flex;
   align-items: center;
@@ -23,7 +29,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-} /* 2 */
+}
 .navbar-flex {
   margin-top: var(--main-margin);
   display: flex;

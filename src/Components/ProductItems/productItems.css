@@ -4,13 +4,11 @@
   justify-content: space-around;
   text-transform: lowercase;
 }
-.one-product hr {
-  color: white;
+.one-product p {
+  border-bottom: 2px solid white;
 }
 .one-product img {
-  color: white;
   width: 400px;
-
   border-radius: calc(var(--main-radius) * 2);
   -webkit-border-radius: calc(var(--main-radius) * 2);
   -moz-border-radius: calc(var(--main-radius) * 2);
