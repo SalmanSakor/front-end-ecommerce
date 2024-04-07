@@ -117,6 +117,7 @@
   -ms-border-radius: calc(var(--main-radius) * 2);
   -o-border-radius: calc(var(--main-radius) * 2);
   margin-top: var(--main-margin);
+  border: 2px solid white;
 }
 .grand-result-filter {
   position: relative;

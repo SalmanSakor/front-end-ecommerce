@@ -51,11 +51,12 @@
   align-items: center;
   justify-content: center;
   border-top-left-radius: var(--main-radius);
+  border-bottom-right-radius: var(--main-radius);
+  border: 2px solid white;
 }
 
 .card-product p.btn-submit {
   text-align: center;
-  cursor: default;
   margin-top: 0;
   color: var(--line-color);
   padding: calc(var(--main-padding) / 10);

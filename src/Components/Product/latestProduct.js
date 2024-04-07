@@ -28,6 +28,7 @@ const LatestProducts = () => {
         rating={item.rating}
         img={item.images[0].image}
         key={index}
+        id={item.id}
         sale
         data={item}
       />

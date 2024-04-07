@@ -26,6 +26,7 @@ const TopRated = () => {
       discount={item.discount}
       rating={item.rating}
       key={index}
+      id={item.id}
       data={item}
     />
   ));

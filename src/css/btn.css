@@ -85,4 +85,5 @@
   -moz-border-radius: var(--main-radius);
   -ms-border-radius: var(--main-radius);
   -o-border-radius: var(--main-radius);
+  border: 1px solid white;
 }

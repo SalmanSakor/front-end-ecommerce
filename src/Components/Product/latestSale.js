@@ -27,6 +27,7 @@ const LatestSale = () => {
       img={item.images[0].image}
       key={index}
       sale
+      id={item.id}
       data={item}
     />
   ));
