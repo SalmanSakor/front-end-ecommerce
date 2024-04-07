@@ -89,11 +89,11 @@ header.top-header {
   background-color: var(--blue-color);
   width: 300px;
   border: 3px solid white;
-  border-radius: calc(var(--main-radius) * 4);
-  -webkit-border-radius: calc(var(--main-radius) * 4);
-  -moz-border-radius: calc(var(--main-radius) * 4);
-  -ms-border-radius: calc(var(--main-radius) * 4);
-  -o-border-radius: calc(var(--main-radius) * 4);
+  border-radius: var(--main-radius);
+  -webkit-border-radius: var(--main-radius);
+  -moz-border-radius: var(--main-radius);
+  -ms-border-radius: var(--main-radius);
+  -o-border-radius: var(--main-radius);
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -112,5 +112,4 @@ header.top-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0;
 }

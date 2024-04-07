@@ -18,6 +18,7 @@ import {
   selectCartItems,
 } from "../../store/cart/cart.selector";
 import { Link } from "react-router-dom";
+import SkeletonShow from "../../Components/Skeleton/skeletonShow.js";
 
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
@@ -69,13 +70,22 @@ const LandingPage = () => {
       <div className="landing-input-icon">
         <div></div>
         <div className="grand-result-filter">
-          <input
-            type="search"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="search product .."
-            className="search-input"
-          />
+          {loading ? (
+            <SkeletonShow
+              length={1}
+              width="300px"
+              height="40px"
+              color="#b2bec3"
+            />
+          ) : (
+            <input
+              type="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="search product .."
+              className="search-input"
+            />
+          )}
           <div className="parent-result-filter">
             {resultFilter}
             {filteredProducts.length === 0 && search.length > 0 && (
@@ -106,17 +116,44 @@ const LandingPage = () => {
 
       <div className="landing-product">
         <LatestSale />
-        <img src={img1} alt="img1" className="img-landing" />
+        {loading ? (
+          <SkeletonShow
+            length={1}
+            width="100%"
+            height="400px"
+            color="#dfe6e9"
+          />
+        ) : (
+          <img src={img1} alt="img1" className="img-landing" />
+        )}
       </div>
 
       <div className="landing-product">
         <TopRated />
-        <img src={img2} alt="img1" className="img-landing" />
+        {loading ? (
+          <SkeletonShow
+            length={1}
+            width="100%"
+            height="400px"
+            color="#dfe6e9"
+          />
+        ) : (
+          <img src={img2} alt="img1" className="img-landing" />
+        )}
       </div>
 
       <div className="landing-product">
         <LatestProduct />
-        <img src={img3} alt="img1" className="img-landing" />
+        {loading ? (
+          <SkeletonShow
+            length={1}
+            width="100%"
+            height="400px"
+            color="#dfe6e9"
+          />
+        ) : (
+          <img src={img3} alt="img1" className="img-landing" />
+        )}
       </div>
 
       <div className="footer">

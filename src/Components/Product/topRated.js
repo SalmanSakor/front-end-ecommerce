@@ -32,7 +32,11 @@ const TopRated = () => {
 
   return (
     <div>
-      <h4 className="top-header">top rated products</h4>
+      {loading ? (
+        <SkeletonShow length={1} width="100%" height="40px" color="#dfe6e9" />
+      ) : (
+        <h4 className="top-header">top rated products</h4>
+      )}
       <div className="parent-card-product">
         {loading ? (
           <SkeletonShow
