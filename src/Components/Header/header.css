@@ -67,7 +67,7 @@
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
   background-color: rgb(46, 134, 222, 85%);
-  border-bottom: 5px white solid;
+  border-bottom: 3px white solid;
 }
 .menu:hover {
   background-color: var(--blue-color);

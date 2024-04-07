@@ -58,7 +58,7 @@ const Header = () => {
   // get all categories
   useEffect(() => {
     Axios.get(`${CAT}`)
-      .then((res) => setCategories(res.data))
+      .then((res) => setCategories(res.data.slice(0, 3)))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, []);

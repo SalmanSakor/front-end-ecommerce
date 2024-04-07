@@ -23,7 +23,7 @@ const Checkout = () => {
                     <th>rating</th>
                     <th>price</th>
                     <th>quantity</th>
-                    <th>delete</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>

@@ -4,6 +4,7 @@ import { faStar as regularStar } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../../store/cart/cart.action";
 import { selectCartItems } from "../../store/cart/cart.selector";
+import { Link } from "react-router-dom";
 
 const OneCategory = (props) => {
   const dispatch = useDispatch();
@@ -34,7 +35,9 @@ const OneCategory = (props) => {
 
   return (
     <div className="card-product">
-      <p className="btn-submit">{props.title}</p>
+      <p className="btn-submit">
+        <Link to={`/allProducts/${props.id}`}>{props.title}</Link>
+      </p>
 
       <div className="cart-product-items">
         <img src={props.img} alt="product" />

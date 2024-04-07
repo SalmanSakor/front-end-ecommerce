@@ -32,11 +32,10 @@ const AllCategories = () => {
   // mapping categories
   const result = categories.map((item, index) => (
     <div key={index} className="one-category">
-      <p className="btn-submit">{item.title}</p>
+      <p className="btn-submit">
+        <Link to={`${item.id}`}>show all {item.title}</Link>
+      </p>
       <img src={item.image} alt="category" />
-      <div className="btn-submit">
-        <Link to={`${item.id}`}>show all</Link>
-      </div>
     </div>
   ));
 

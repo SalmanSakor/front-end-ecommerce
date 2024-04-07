@@ -46,6 +46,7 @@ const Category = () => {
         rating={item.rating}
         key={index}
         data={item}
+        id={item.id}
       />
     ));
 

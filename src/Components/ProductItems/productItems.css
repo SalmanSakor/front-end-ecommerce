@@ -2,12 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-transform: lowercase;
+}
+.one-product hr {
+  color: white;
 }
 .one-product img {
   color: white;
+  width: 400px;
+
   border-radius: calc(var(--main-radius) * 2);
   -webkit-border-radius: calc(var(--main-radius) * 2);
   -moz-border-radius: calc(var(--main-radius) * 2);
   -ms-border-radius: calc(var(--main-radius) * 2);
   -o-border-radius: calc(var(--main-radius) * 2);
+  border: 5px solid white;
 }

@@ -43,7 +43,7 @@
   z-index: 1;
   color: white;
   border: 1px solid white;
-  border-bottom: 5px white solid;
+  border-bottom: 3px white solid;
   padding: var(--main-padding);
   border-radius: calc(var(--main-radius) * 2);
   -webkit-border-radius: calc(var(--main-radius) * 2);

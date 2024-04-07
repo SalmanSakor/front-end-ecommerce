@@ -14,12 +14,19 @@ const OneProduct = (props) => {
   return (
     <div className="one-product">
       <div>
-        <p>name : {props.title}</p>
-        <p>description : {props.desc}</p>
-        <p>rating : {props.rating}/5</p>
-        <div>price : {props.price}$</div>
-        <div>discount : {props.discount}$</div>
-        <div>about : {props.about}</div>
+        <p>Name : {props.title}</p>
+        <hr />
+        <p>Description : {props.desc}</p>
+        <hr />
+        <p>Rating : {props.rating}/5</p>
+        <hr />
+        <div>Price : {props.price}$</div>
+        <hr />
+        <div>Discount : {props.discount}$</div>
+        <hr />
+        <div>About : {props.about}</div>
+        <hr />
+
         <button onClick={handleClickCart} className="btn-submit">
           add to cart
         </button>
