@@ -141,7 +141,6 @@
   text-align: center;
   border-bottom-left-radius: var(--main-radius);
   border-bottom-right-radius: var(--main-radius);
-  border-bottom: 3px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
 }

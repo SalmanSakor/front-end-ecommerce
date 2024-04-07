@@ -73,8 +73,8 @@ const LandingPage = () => {
           {loading ? (
             <SkeletonShow
               length={1}
-              width="300px"
-              height="40px"
+              width="150px"
+              height="30px"
               color="#b2bec3"
             />
           ) : (
@@ -120,7 +120,7 @@ const LandingPage = () => {
           <SkeletonShow
             length={1}
             width="100%"
-            height="400px"
+            height="300px"
             color="#dfe6e9"
           />
         ) : (
@@ -134,7 +134,7 @@ const LandingPage = () => {
           <SkeletonShow
             length={1}
             width="100%"
-            height="400px"
+            height="300px"
             color="#dfe6e9"
           />
         ) : (
@@ -148,7 +148,7 @@ const LandingPage = () => {
           <SkeletonShow
             length={1}
             width="100%"
-            height="400px"
+            height="300px"
             color="#dfe6e9"
           />
         ) : (

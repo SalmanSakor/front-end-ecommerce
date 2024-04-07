@@ -167,7 +167,7 @@ const Header = () => {
         style={{ display: windowSize <= 768 && "none" }}
       >
         {loading ? (
-          <SkeletonShow length={6} width="70px" height="30px" color="#dfe6e9" />
+          <SkeletonShow length={4} width="70px" height="30px" color="#dfe6e9" />
         ) : (
           <>
             {navbar}

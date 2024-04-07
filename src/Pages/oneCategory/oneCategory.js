@@ -62,8 +62,8 @@ const Category = () => {
       <div className="parent-card-product">
         {loading ? (
           <SkeletonShow
-            length={6}
-            width="200px"
+            length={10}
+            width="170px"
             height="500px"
             color="#b2bec3"
           />

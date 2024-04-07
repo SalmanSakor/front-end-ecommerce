@@ -6,6 +6,7 @@
 }
 .one-product p {
   border-bottom: 2px solid white;
+  letter-spacing: 1px;
 }
 .one-product img {
   width: 400px;

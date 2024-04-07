@@ -57,9 +57,9 @@ const AllCategories = () => {
       <div className="all-categories">
         {loading ? (
           <SkeletonShow
-            length={5}
-            width="250px"
-            height="400px"
+            length={7}
+            width="170px"
+            height="300px"
             color="#b2bec3"
           />
         ) : (

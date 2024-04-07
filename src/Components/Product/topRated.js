@@ -42,8 +42,8 @@ const TopRated = () => {
         {loading ? (
           <SkeletonShow
             length={4}
-            width="200px"
-            height="500px"
+            width="150px"
+            height="300px"
             color="#dfe6e9"
           />
         ) : (
