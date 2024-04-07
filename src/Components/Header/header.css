@@ -78,3 +78,39 @@
 header.top-header {
   background-color: var(--blue-color);
 }
+
+.pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  padding: var(--main-padding);
+  color: white;
+  background-color: var(--blue-color);
+  width: 300px;
+  border: 3px solid white;
+  border-radius: calc(var(--main-radius) * 4);
+  -webkit-border-radius: calc(var(--main-radius) * 4);
+  -moz-border-radius: calc(var(--main-radius) * 4);
+  -ms-border-radius: calc(var(--main-radius) * 4);
+  -o-border-radius: calc(var(--main-radius) * 4);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.pop-up-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.pop-up .btn-submit {
+  text-transform: lowercase;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}

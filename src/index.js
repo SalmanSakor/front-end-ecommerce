@@ -7,6 +7,13 @@ import App from "./App";
 // useContext
 import MenuProvider from "./Context/menu";
 import WidthProvider from "./Context/width";
+import PopUpProvider from "./Context/pop-up";
+import SideOpenContext from "./Context/sideOpen";
+
+// redux
+import { Provider } from "react-redux";
+import { store, persistor } from "./store/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 // css files
 import "./App.css";
@@ -36,21 +43,19 @@ import "./css/media.css";
 // skeleton
 import "react-loading-skeleton/dist/skeleton.css";
 
-// redux
-import { Provider } from "react-redux";
-import { store, persistor } from "./store/store";
-import { PersistGate } from "redux-persist/integration/react";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 root.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <WidthProvider>
         <MenuProvider>
-          <Router>
-            <App />
-          </Router>
+          <PopUpProvider>
+            <SideOpenContext>
+              <Router>
+                <App />
+              </Router>
+            </SideOpenContext>
+          </PopUpProvider>
         </MenuProvider>
       </WidthProvider>
     </PersistGate>

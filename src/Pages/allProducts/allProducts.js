@@ -3,9 +3,11 @@ import { Axios } from "../../axios/axios.js";
 import { useParams } from "react-router-dom";
 import { PRO } from "../../api/api";
 import ProductItems from "../../Components/ProductItems/productItems.js";
+import SkeletonShow from "../../Components/Skeleton/skeletonShow";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
   console.log(id);
   console.log(products);
@@ -14,7 +16,8 @@ const AllProducts = () => {
   useEffect(() => {
     Axios.get(`${PRO}`)
       .then((data) => setProducts(data.data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
   }, []);
 
   // map product items
@@ -23,6 +26,7 @@ const AllProducts = () => {
     .map((item, index) => (
       <ProductItems
         key={index}
+        about={item.About}
         title={item.title}
         desc={item.description}
         img={item.images[0].image}
@@ -33,7 +37,15 @@ const AllProducts = () => {
       />
     ));
 
-  return <div>{result}</div>;
+  return (
+    <div>
+      {loading ? (
+        <SkeletonShow length={1} width="100%" height="400px" color="#b2bec3" />
+      ) : (
+        result
+      )}
+    </div>
+  );
 };
 
 export default AllProducts;

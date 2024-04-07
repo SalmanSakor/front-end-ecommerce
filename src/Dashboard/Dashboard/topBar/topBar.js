@@ -5,21 +5,26 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useEffect, useState } from "react";
-import { Menu } from "../../../Context/menu";
+import { OpenSide } from "../../../Context/sideOpen";
 import { Axios } from "../../../axios/axios";
 import { USER, LOGOUT } from "../../../api/api";
 import Cookie from "cookie-universal";
 import { Width } from "../../../Context/width";
+import { Pop } from "../../../Context/pop-up";
 
 const TopBar = () => {
   const cookie = Cookie();
+  const token = cookie.get("token");
   const [name, setName] = useState("");
 
-  // menuContext
-  const menuContext = useContext(Menu);
-  const setIsOpen = menuContext.setIsOpen;
-  const isOpen = menuContext.isOpen;
-
+  // menu side-bar Context
+  const menuContext = useContext(OpenSide);
+  const setIsOpen = menuContext.setIsOpenSide;
+  const isOpen = menuContext.isOpenSide;
+  // popUpContext
+  const popContext = useContext(Pop);
+  const setIsPop = popContext.setIsPop;
+  const isPop = popContext.isPop;
   // widthContext
   const widthContext = useContext(Width);
   const widthWindow = widthContext.windowWidth;
@@ -31,12 +36,15 @@ const TopBar = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  // handle
-  const handleLink = () => {
+  // handle click icon sideBar
+  const handleClickIcon = () => {
     setIsOpen((prev) => !prev);
   };
-
-  const handleClick = async () => {
+  // handle click pop-up
+  const handleClickIconLogout = () => {
+    setIsPop((prev) => !prev);
+  };
+  const logoutHandler = async () => {
     try {
       await Axios.get(`${LOGOUT}`);
       cookie.remove("token");
@@ -53,7 +61,7 @@ const TopBar = () => {
         )}
         <FontAwesomeIcon
           icon={widthWindow <= 768 && !isOpen ? faXmark : faBars}
-          onClick={handleLink}
+          onClick={handleClickIcon}
           className="icon-topBar"
         />
       </div>
@@ -62,10 +70,26 @@ const TopBar = () => {
 
         <FontAwesomeIcon
           icon={faRightFromBracket}
-          onClick={handleClick}
+          onClick={handleClickIconLogout}
           className="icon-topBar"
         />
       </div>
+      <>
+        {/* pop-up */}
+        {!isPop && token && (
+          <div className="pop-up">
+            <div>confirm logout ?</div>
+            <div className="pop-up-flex">
+              <div className="btn-submit" onClick={handleClickIconLogout}>
+                cancel
+              </div>
+              <div onClick={logoutHandler} className="btn-submit">
+                logout
+              </div>
+            </div>
+          </div>
+        )}
+      </>
     </div>
   );
 };

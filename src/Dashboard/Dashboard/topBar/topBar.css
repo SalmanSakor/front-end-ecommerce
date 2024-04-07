@@ -35,3 +35,6 @@
 .link-topBar {
   border-bottom: 5px solid var(--blue-color);
 }
+.topBar .pop-up .btn-submit {
+  font-weight: normal;
+}

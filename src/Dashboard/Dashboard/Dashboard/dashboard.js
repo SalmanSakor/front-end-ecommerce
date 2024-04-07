@@ -5,7 +5,7 @@ import { Outlet, NavLink } from "react-router-dom";
 import TopBar from "../topBar/topBar";
 import SideBar from "../sideBar/sideBar";
 import { Data } from "../sideBar/sideLinks";
-import { Menu } from "../../../Context/menu";
+import { OpenSide } from "../../../Context/sideOpen";
 import { Width } from "../../../Context/width";
 import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,9 +13,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Dashboard = () => {
   const [role, setRole] = useState("");
 
-  // menuContext
-  const openContext = useContext(Menu);
-  const isOpen = openContext.isOpen;
+  // menu side-bar Context
+  const openContext = useContext(OpenSide);
+  const isOpen = openContext.isOpenSide;
 
   // widthContext
   const widthContext = useContext(Width);

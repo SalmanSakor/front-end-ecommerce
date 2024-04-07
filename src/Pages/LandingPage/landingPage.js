@@ -22,6 +22,7 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const isCartOpen = useSelector(selectIsCartOpen);
   const counter = useSelector(selectCartCount);
@@ -35,10 +36,9 @@ const LandingPage = () => {
   // get products
   useEffect(() => {
     Axios.get(`${PRO}`)
-      .then((data) => {
-        setProducts(data.data);
-      })
-      .catch((err) => console.log(err));
+      .then((data) => setProducts(data.data))
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
   }, []);
 
   // filter products

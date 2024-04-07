@@ -13,6 +13,7 @@ import { CAT } from "../../api/api";
 import SkeletonShow from "../Skeleton/skeletonShow";
 import { Width } from "./../../Context/width";
 import { Menu } from "../../Context/menu";
+import { Pop } from "../../Context/pop-up";
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
@@ -29,11 +30,20 @@ const Header = () => {
   const setOpenMenu = menuContext.setIsOpen;
   const isOpenMenu = menuContext.isOpen;
 
+  // popUpContext
+  const popContext = useContext(Pop);
+  const setIsPop = popContext.setIsPop;
+  const isPop = popContext.isPop;
+
   // handle click menu
   const handleClickIcon = () => {
     setOpenMenu((prev) => !prev);
   };
 
+  // handle click pop-up
+  const handleClickIconLogout = () => {
+    setIsPop((prev) => !prev);
+  };
   // handle logout
   const logoutHandler = async () => {
     try {
@@ -129,10 +139,26 @@ const Header = () => {
           {token && (
             <FontAwesomeIcon
               icon={faRightFromBracket}
-              onClick={logoutHandler}
               className="icon-header"
+              onClick={handleClickIconLogout}
             />
           )}
+          <>
+            {/* pop-up */}
+            {!isPop && token && (
+              <div className="pop-up">
+                <div>confirm logout ?</div>
+                <div className="pop-up-flex">
+                  <div className="btn-submit" onClick={handleClickIconLogout}>
+                    cancel
+                  </div>
+                  <div onClick={logoutHandler} className="btn-submit">
+                    logout
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
         </div>
       </div>
 
