@@ -3,9 +3,10 @@
   color: var(--line-color);
   width: 100%;
   height: 100vh;
-  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 .child-404 {
+  text-transform: lowercase;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,10 +16,11 @@
 
 .page-404-dashboard {
   font-size: var(--main-font);
-  text-transform: capitalize;
+
   color: var(--line-color);
 }
 .child-404-dashboard {
+  text-transform: lowercase;
   width: fit-content;
   margin: auto;
 }

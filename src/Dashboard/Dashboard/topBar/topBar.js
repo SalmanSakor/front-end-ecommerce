@@ -78,7 +78,7 @@ const TopBar = () => {
         {/* pop-up */}
         {!isPop && token && (
           <div className="pop-up">
-            <div>confirm logout ?</div>
+            <div style={{ letterSpacing: "1px" }}>confirm logout ?</div>
             <div className="pop-up-flex">
               <div className="btn-submit" onClick={handleClickIconLogout}>
                 cancel

@@ -65,7 +65,7 @@
 }
 .btn-404 {
   text-transform: lowercase;
-  border-bottom: 3px solid var(--blue-color);
+  border-bottom: 2px solid white;
   cursor: pointer;
   text-align: center;
 }
