@@ -8,15 +8,3 @@ export const fetchCategoriesSuccess = (categoriesMap) =>
 
 export const fetchCategoriesFailed = (error) =>
   createAction(CATEGORIES_ACTION_TYPES.FETCH_CATEGORIES_FAILED, error);
-
-// export const fetchCategoriesAsync = () => {
-//   return async (dispatch) => {
-//      dispatch(fetchCategoriesStart(false));
-//     try {
-//       const res = await Axios.get(`${CAT}`);
-//       dispatch(fetchCategoriesSuccess(res.data));
-//     } catch (err) {
-//       dispatch(fetchCategoriesFailed(err));
-//     }
-//   };
-// };
